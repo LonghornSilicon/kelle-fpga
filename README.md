@@ -55,10 +55,21 @@ After synthesis, compare DSP/BRAM usage against ZCU104 budget:
 
 ## Project roadmap
 
-- [x] RSA systolic array — HLS csim + synthesis
-- [x] Systolic evictor — HLS csim + synthesis
-- [x] AERP logic — HLS csim + synthesis
+- [x] RSA systolic array — HLS C++ written, **g++ csim PASS** (all 4 shapes)
+- [x] Systolic evictor — HLS C++ written, **g++ csim PASS**
+- [x] AERP logic — HLS C++ written, **g++ csim PASS** (evict + recompute)
+- [x] `hls_stubs/` — ap_int/ap_uint/ap_ufixed stubs for native g++ validation
+- [ ] Vitis HLS synthesis — **blocked: Vitis HLS 2023.2 not yet installed**
 - [ ] kelle_top integration wrapper
-- [ ] Vivado block design (PS + PL via AXI)
+- [ ] Vivado block design (PS + PL via AXI) — **blocked: ZCU104 board not yet in hand**
 - [ ] Hardware validation on ZCU104
-- [ ] RTL rewrite of RSA critical path
+- [ ] RTL rewrite of RSA critical path (after synthesis confirms timing gap)
+
+### How to run C-sim now (no Vitis HLS required)
+
+```bash
+mkdir build
+make csim      # compiles + runs all three testbenches via g++
+```
+
+Requires g++ 11+ with C++14 support.
