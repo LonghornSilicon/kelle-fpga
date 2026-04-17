@@ -4,6 +4,7 @@
 *.str
 .Xil/
 hls_*/
+!hls_stubs/
 vivado_*/
 *.xpr
 *.bit
