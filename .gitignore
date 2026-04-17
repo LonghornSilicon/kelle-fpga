@@ -1,0 +1,39 @@
+# Vivado/Vitis HLS generated files
+*.jou
+*.log
+*.str
+.Xil/
+hls_*/
+vivado_*/
+*.xpr
+*.bit
+*.ltx
+*.runs/
+*.srcs/
+*.sim/
+*.ip_user_files/
+*.cache/
+*.gen/
+*.hw/
+*.sw/
+*.os
+*.veo
+*.vho
+NA/
+ip_repo/
+
+# HLS project dirs (created by scripts)
+hls_rsa/
+hls_evictor/
+hls_aerp/
+hls_kelle_top/
+hls_*_csim/
+
+# Python
+__pycache__/
+*.pyc
+test_vectors/*/
+
+# OS
+.DS_Store
+Thumbs.db
