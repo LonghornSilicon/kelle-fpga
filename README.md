@@ -46,8 +46,8 @@ From C simulation (testbench PASS/FAIL):
 | Shape | M | K | N | Expected cycles |
 |-------|---|---|---|----------------|
 | QKV decode | 1 | 768 | 2304 | 57,528 |
-| Attn scores kv=128 | 1 | 64 | 128 | 2,945 |
-| FFN up decode | 1 | 768 | 3072 | 76,672 |
+| Attn scores kv=128 | 1 | 64 | 128 | 380 |
+| FFN up decode | 1 | 768 | 3072 | 76,704 |
 
 After synthesis, compare DSP/BRAM usage against ZCU104 budget:
 - DSP target: < 1,728 (ZCU104 total)
